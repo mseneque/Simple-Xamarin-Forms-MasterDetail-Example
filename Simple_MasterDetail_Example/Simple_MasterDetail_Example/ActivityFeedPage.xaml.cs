@@ -24,6 +24,20 @@ namespace Simple_MasterDetail_Example
         {
             ActivityFeed.ItemsSource = activities;
         }
+
+        private async void ActivityFeed_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+           var userService = new UserService(); 
+            
+            // to stop item selected loop after setting it to null
+            if (e.SelectedItem == null)
+                return;
+
+            if (e.SelectedItem is Activity activity)
+                await Navigation.PushAsync(new ProfilePage(userService.GetUser(activity.UserId)));
+
+            ActivityFeed.SelectedItem = null;
+        }
     }
 
 

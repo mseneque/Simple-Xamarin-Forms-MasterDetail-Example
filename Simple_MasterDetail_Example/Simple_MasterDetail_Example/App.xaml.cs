@@ -1,5 +1,4 @@
-﻿
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace Simple_MasterDetail_Example
 {
@@ -7,6 +6,7 @@ namespace Simple_MasterDetail_Example
     {
         public App()
         {
+
             InitializeComponent();
 
             //MainPage = new Simple_MasterDetail_Example.MainPage();

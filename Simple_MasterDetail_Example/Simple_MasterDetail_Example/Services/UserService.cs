@@ -1,11 +1,12 @@
 ﻿using Simple_MasterDetail_Example.Models;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Simple_MasterDetail_Example.Services
 {
     class UserService
     {
-        private List<User> _userService = new List<User>
+        private List<User> _users = new List<User>
         {
             new User
             {
@@ -69,7 +70,10 @@ namespace Simple_MasterDetail_Example.Services
             }
         };
 
-
+        public User GetUser(int id)
+        {
+            return _users.FirstOrDefault(s => s.Id == id);
+        }
 
     }
 }
