@@ -27,8 +27,8 @@ namespace Simple_MasterDetail_Example
 
         private async void ActivityFeed_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-           var userService = new UserService(); 
-            
+            var userService = new UserService();
+
             // to stop item selected loop after setting it to null
             if (e.SelectedItem == null)
                 return;

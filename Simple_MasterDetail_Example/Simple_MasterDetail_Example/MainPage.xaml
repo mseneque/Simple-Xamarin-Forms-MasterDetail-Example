@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:Simple_MasterDetail_Example"
-             x:Class="Simple_MasterDetail_Example.MainPage">
+<TabbedPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:local="clr-namespace:Simple_MasterDetail_Example"
+	x:Class="Simple_MasterDetail_Example.MainPage">
 
-	<Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+	<NavigationPage Title="Activity" Icon="heart" BarBackgroundColor="DarkGray" BarTextColor="White">
+		<x:Arguments>
+			<local:ActivityFeedPage />
+		</x:Arguments>
+	</NavigationPage>
+	
+	<local:ProfilePage Title="Profile" Icon="user"/>
 
-</ContentPage>
+</TabbedPage>

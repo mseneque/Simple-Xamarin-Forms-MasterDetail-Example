@@ -8,7 +8,7 @@
         <RelativeLayout >
             <!--Banner-->
             <BoxView 
-                Color="#f7f7f7" 
+                Color="#ffa9a9a9" 
                 x:Name="Banner"
                 RelativeLayout.WidthConstraint="{ConstraintExpression 
                     Type=RelativeToParent,

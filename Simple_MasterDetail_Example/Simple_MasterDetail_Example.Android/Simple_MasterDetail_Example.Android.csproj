@@ -110,6 +110,14 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\drawable\heart" />
+    <AndroidResource Include="Resources\drawable\user" />
+    <AndroidResource Include="Resources\drawable-hdpi\heart" />
+    <AndroidResource Include="Resources\drawable-hdpi\user" />
+    <AndroidResource Include="Resources\drawable-xhdpi\heart" />
+    <AndroidResource Include="Resources\drawable-xhdpi\user" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\heart" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\user" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />

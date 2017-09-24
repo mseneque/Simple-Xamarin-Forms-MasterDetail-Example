@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Simple_MasterDetail_Example.Models;
+﻿using Simple_MasterDetail_Example.Models;
 using Simple_MasterDetail_Example.Services;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +9,7 @@ namespace Simple_MasterDetail_Example
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
-        
+
         public ProfilePage(User user)
         {
             // Null-coalescing operator,
@@ -22,6 +18,15 @@ namespace Simple_MasterDetail_Example
 
             InitializeComponent();
 
+        }
+
+        public ProfilePage()
+        {
+            // Get logged in user
+            var userService = new UserService();
+            BindingContext = userService.GetUser(10) ?? throw new ArgumentNullException();
+
+            InitializeComponent();
         }
     }
 }

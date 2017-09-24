@@ -9,8 +9,17 @@ namespace Simple_MasterDetail_Example
 
             InitializeComponent();
 
-            //MainPage = new Simple_MasterDetail_Example.MainPage();
-            MainPage = new NavigationPage(new Simple_MasterDetail_Example.ActivityFeedPage());
+            MainPage = new Simple_MasterDetail_Example.MainPage()
+            {
+                BarBackgroundColor = Color.DarkGray,
+                BarTextColor = Color.Black
+            };
+
+            //MainPage = new NavigationPage(new Simple_MasterDetail_Example.ActivityFeedPage())
+            //{
+            //    BarBackgroundColor = Color.DarkGray,
+            //    BarTextColor = Color.White
+            //};
         }
 
         protected override void OnStart()
