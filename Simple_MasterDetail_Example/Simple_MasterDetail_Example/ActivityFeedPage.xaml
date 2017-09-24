@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Simple_MasterDetail_Example.ActivityFeedPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Label Text="Welcome to Xamarin Forms!" />-->
+            <ListView 
+                x:Name="ActivityFeed"
+                HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="5"
+                                         Orientation="Horizontal">
+                                <ic:CircleImage
+                                    WidthRequest="30"
+                                    HeightRequest="30"
+                                    Aspect="AspectFit"
+                                    Source="{Binding ImageUrl}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="Center"/>
+                                <Label Text="{Binding Description}" />
+
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
